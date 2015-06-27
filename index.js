@@ -17,13 +17,13 @@ board.on('ready', function() {
 	btn = new five.Button(7);
 	led = new five.Led.RGB([11,10,9]);
 
-	led.color('#ffffff');
+	led.color('#00ff00');
 
 	btn.on('down', function(value) {
 		console.log('Light toggle pressed.');
 		
 		request.post({
-			url: 'http://maker.ifttt.com/trigger/light_switch/with/key/{{your-key-here}}'
+			url: 'http://maker.ifttt.com/trigger/light_switch/with/key/{{yourkeyhere}}'
 		}, function(error, response, body) {
 			console.log('Body response was ', body);
 			console.log('Error was ', error);
@@ -33,6 +33,7 @@ board.on('ready', function() {
 
 app.post('/led', function (req, res) {
 	var response = req.body;
+	console.log('Response was ', response);
 
 	led.color(response.color);
 	res.send('LED request successful!');
