@@ -1,0 +1,14 @@
+{
+  "name": "IFTTTArduinoDemo",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "events": "^1.0.2",
+    "express": "^4.12.4",
+    "fs": "0.0.2",
+    "http": "0.0.0",
+    "johnny-five": "^0.8.26",
+    "request": "^2.55.0",
+    "serialport": "^1.7.1"
+  }
+}
